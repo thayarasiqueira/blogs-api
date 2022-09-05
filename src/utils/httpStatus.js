@@ -7,6 +7,7 @@ const StatusCode = {
     UNPROCESSABLE: 422,
     SERVER_ERROR: 500,
     CONFLICT: 409,
+    UNAUTHORIZED: 401,
   };
   
   const ErrorMessage = {
@@ -18,6 +19,8 @@ const StatusCode = {
     INVALID_EMAIL: '"email" must be a valid email',
     REQUIRED_FIELD: (field) => `"${field}" field is required`,
     USER_REGISTRED: 'User already registered',
+    TOKEN_NOT_FOUND: 'Token not found',
+    EXPIRED_TOKEN: 'Expired or invalid token',
   };
   
   module.exports = {

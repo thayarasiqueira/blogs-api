@@ -35,6 +35,10 @@ const userServices = {
       
         return { code: StatusCode.CREATED, token };
     },
+    getUsers: async () => {
+       const users = await User.findAll({ attributes: ['id', 'displayName', 'email', 'image'] });
+       return users;
+    },
 };
 
 module.exports = userServices;
