@@ -15,6 +15,10 @@ const categoriesService = {
           
             return { code: StatusCode.CREATED, response };
         },
+    getCategories: async () => {
+        const categories = await Category.findAll({ attributes: ['id', 'name'] });
+        return categories;
+    },
 };
 
 module.exports = categoriesService;

@@ -19,6 +19,16 @@ const categoriesController = {
               .json({ message: `${ErrorMessage.INTERNAL_ERROR} ${err.message}` });
           }
     },
+    getCategories: async (_req, res) => {
+        try {
+            const categories = await categoriesService.getCategories();
+            res.status(StatusCode.OK).json(categories);
+        } catch (err) {
+              res
+              .status(StatusCode.SERVER_ERROR)
+              .json({ message: `${ErrorMessage.INTERNAL_ERROR} ${err.message}` });
+        }
+    },
 };
 
 module.exports = categoriesController;
