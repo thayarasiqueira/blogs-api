@@ -1,0 +1,20 @@
+const { Category } = require('../models');
+const { StatusCode, ErrorMessage } = require('../../utils/httpStatus');
+
+const categoriesService = {
+    addCategory: async (name) => {
+            if (!name) {
+              return { code: StatusCode.BAD_REQUEST, message: ErrorMessage.REQUIRED_FIELD('name') };
+            }
+            const category = await Category.create({ name });
+          
+            const response = {
+              id: category.dataValues.id,
+              name,
+            };
+          
+            return { code: StatusCode.CREATED, response };
+        },
+};
+
+module.exports = categoriesService;

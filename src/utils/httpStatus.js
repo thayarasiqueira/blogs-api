@@ -17,7 +17,7 @@ const StatusCode = {
     INVALID_LENGTH: (field, length) =>
     `"${field}" length must be at least ${length} characters long`,
     INVALID_EMAIL: '"email" must be a valid email',
-    REQUIRED_FIELD: (field) => `"${field}" field is required`,
+    REQUIRED_FIELD: (field) => `"${field}" is required`,
     USER_REGISTRED: 'User already registered',
     TOKEN_NOT_FOUND: 'Token not found',
     EXPIRED_TOKEN: 'Expired or invalid token',
