@@ -22,6 +22,7 @@ const StatusCode = {
     TOKEN_NOT_FOUND: 'Token not found',
     EXPIRED_TOKEN: 'Expired or invalid token',
     FIELD_DOESNT_EXIST: (field) => `${field} does not exist`,
+    CATEGORY_NOT_FOUND: '"categoryIds" not found',
   };
   
   module.exports = {
