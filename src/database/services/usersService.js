@@ -39,6 +39,18 @@ const userServices = {
        const users = await User.findAll({ attributes: ['id', 'displayName', 'email', 'image'] });
        return users;
     },
+    getUserById: async (id) => {
+        const user = await User.findOne({ where: { id },
+            attributes: ['id', 'displayName', 'email', 'image'] });
+            if (!user) {
+                return {
+                    code: StatusCode.NOT_FOUND,
+                    message: ErrorMessage.FIELD_DOESNT_EXIST('User'),
+                };
+              }
+            
+              return { code: StatusCode.OK, response: user };
+     },
 };
 
 module.exports = userServices;

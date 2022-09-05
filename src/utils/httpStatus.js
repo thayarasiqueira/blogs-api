@@ -21,6 +21,7 @@ const StatusCode = {
     USER_REGISTRED: 'User already registered',
     TOKEN_NOT_FOUND: 'Token not found',
     EXPIRED_TOKEN: 'Expired or invalid token',
+    FIELD_DOESNT_EXIST: (field) => `${field} does not exist`,
   };
   
   module.exports = {

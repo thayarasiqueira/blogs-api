@@ -41,6 +41,20 @@ const usersControllers = {
               .json({ message: `${ErrorMessage.INTERNAL_ERROR} ${err.message}` });
         }
     },
+    getUserById: async (req, res) => {
+        try {
+            const { id } = req.params;
+            const { code, message, response } = await usersService.getUserById(id);
+            if (message) {
+                return res.status(code).json({ message });
+              }
+              res.status(code).json(response);
+        } catch (err) {
+              res
+              .status(StatusCode.SERVER_ERROR)
+              .json({ message: `${ErrorMessage.INTERNAL_ERROR} ${err.message}` });
+        }
+    },
 };
 
 module.exports = usersControllers;
