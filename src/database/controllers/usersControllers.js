@@ -1,11 +1,11 @@
-const usersServices = require('../services/usersService');
+const usersService = require('../services/usersService');
 const { StatusCode, ErrorMessage } = require('../../utils/httpStatus');
 
 const usersControllers = {
     login: async (req, res) => {
         try {
             const { email, password } = req.body;
-            const { code, message, token } = await usersServices.login(email, password);   
+            const { code, message, token } = await usersService.login(email, password);   
             if (message) {
               return res.status(code).json({ message });
             }    
