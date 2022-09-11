@@ -1,16 +1,27 @@
-# 🚧 README em construção 🚧
+# Blogs API
 
-<!-- Olá, Tryber!
+This project creates a RESTful API and a database for the content of a Blog.
+It uses Node.js and the Sequelize package to CRUD posts.
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
 
-É essencial que você preencha esse documento por conta própria, ok?
+## Installation
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+Use the package manager [npm] to install all dependencies.
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+```bash
+npm install
+```
 
--->
+## Usage
+
+In the project directory, you can run:
+
+```
+npm start
+```
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
